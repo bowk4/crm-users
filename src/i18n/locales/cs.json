@@ -4,5 +4,7 @@
   "addComment": "Přidat komentář",
   "add": "Přidat",
   "details": "Podrobnosti",
-  "errorLoadingUsers": "Chyba při načítání uživatelů"
+  "errorLoadingUsers": "Chyba při načítání uživatelů",
+  "totalListUsers": "Celkový",
+  "perPage": "stránka"
 }
