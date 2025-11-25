@@ -4,5 +4,7 @@
   "addComment": "Add comment",
   "add": "Add",
   "details": "Detail",
-  "errorLoadingUsers": "Error Loading Users"
+  "errorLoadingUsers": "Error Loading Users",
+  "totalListUsers": "Total",
+  "perPage": "page"
 }
