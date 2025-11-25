@@ -1,3 +1,8 @@
 {
-  "title": "Users"
+  "title": "Users",
+  "filterPlaceholder": "Search",
+  "addComment": "Add comment",
+  "add": "Add",
+  "details": "Detail",
+  "errorLoadingUsers": "Error Loading Users"
 }

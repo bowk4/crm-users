@@ -1,5 +1,6 @@
 import {Layout, Select} from 'antd'
 import {useTranslation} from 'react-i18next'
+import Router from "./routes.tsx";
 
 const {Header, Content} = Layout
 
@@ -19,7 +20,7 @@ export default function App() {
                 </div>
             </Header>
             <Content>
-
+                <Router/>
             </Content>
         </Layout>
     )
