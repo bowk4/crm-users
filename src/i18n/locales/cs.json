@@ -1,3 +1,8 @@
 {
-  "title": "Uživatelé"
+  "title": "Uživatelé",
+  "filterPlaceholder": "Hledat podle jména nebo firmy",
+  "addComment": "Přidat komentář",
+  "add": "Přidat",
+  "details": "Podrobnosti",
+  "errorLoadingUsers": "Chyba při načítání uživatelů"
 }
