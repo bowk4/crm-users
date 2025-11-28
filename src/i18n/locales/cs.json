@@ -6,5 +6,7 @@
   "details": "Podrobnosti",
   "errorLoadingUsers": "Chyba při načítání uživatelů",
   "totalListUsers": "Celkový",
-  "perPage": "stránka"
+  "perPage": "stránka",
+  "email": "E-mail",
+  "nameCompany": "Společnost"
 }

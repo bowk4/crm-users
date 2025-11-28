@@ -56,8 +56,8 @@ export default function UserList({ users, loading, initialPageSize = 10 }: UserL
                             <Button type="link" disabled>{t('add')}</Button>
                         </div>
                         }>
-                        <div>{user.email}</div>
-                        <div>{user.company?.name}</div>
+                        <div className={styles.user_email}>{t('email')}: {user.email}</div>
+                        <div className={styles.user_company}>{t('nameCompany')}: {user.company?.name}</div>
                     </Card>
                 </List.Item>
             )}
