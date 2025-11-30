@@ -1,0 +1,22 @@
+.title_comments {
+  width: 100%;
+  text-align: center;
+}
+
+.comments_numberWrapper {
+  align-self: flex-start;
+
+  .comments_numberList {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1677ff;
+    opacity: 0.5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-weight: 600
+  }
+}

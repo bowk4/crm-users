@@ -1,7 +1,7 @@
 import {List, Card, Button, type PaginationProps} from 'antd'
 import styles from './UserList.module.scss'
 import { Link } from 'react-router-dom'
-import type {User} from "../../store/usersSlice.ts";
+import type {User} from "../../store/slice/usersSlice.ts";
 import {useTranslation} from "react-i18next";
 import {useState} from "react";
 
@@ -52,7 +52,9 @@ export default function UserList({ users, loading, initialPageSize = 10 }: UserL
                         title={<Link to={`/users/${user.id}`}>{user.name}</Link>}
                         extra={
                         <div>
-                            <Button type="link" disabled>{t('details')}</Button>
+                            <Link to={`/users/${user.id}`}>
+                                <Button type="link">{t('details')}</Button>
+                            </Link>
                             <Button type="link" disabled>{t('add')}</Button>
                         </div>
                         }>

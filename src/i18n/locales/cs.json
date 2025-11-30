@@ -8,5 +8,9 @@
   "totalListUsers": "Celkový",
   "perPage": "stránka",
   "email": "E-mail",
-  "nameCompany": "Společnost"
+  "nameCompany": "Společnost",
+  "comments": "Komentáře",
+  "userNotFound": "Uživatel nenalezen",
+  "serverError": "Chyba serveru",
+  "noComments": "Žádné komentáře"
 }
