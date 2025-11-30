@@ -8,5 +8,9 @@
   "totalListUsers": "Total",
   "perPage": "page",
   "email": "Email",
-  "nameCompany": "Company"
+  "nameCompany": "Company",
+  "comments": "Comments",
+  "userNotFound": "User Not Found",
+  "serverError": "Server Error",
+  "noComments": "No comments"
 }

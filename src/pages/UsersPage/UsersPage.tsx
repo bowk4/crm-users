@@ -1,6 +1,6 @@
-import {useAppDispatch, useAppSelector} from '../store/hooks'
-import {loadUsers, type User} from '../store/usersSlice.ts'
-import UserList from '../components/UserList/UserList'
+import {useAppDispatch, useAppSelector} from '../../store/hooks.ts'
+import {loadUsers, type User} from '../../store/slice/usersSlice.ts'
+import UserList from '../../components/UserList/UserList.tsx'
 import {Alert, Button, Input} from "antd";
 import {useEffect, useMemo, useState} from "react";
 import {useTranslation} from "react-i18next";
