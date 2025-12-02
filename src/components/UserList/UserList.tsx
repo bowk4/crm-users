@@ -10,9 +10,10 @@ interface UserListProps {
     users: User[]
     loading: boolean
     initialPageSize?: number
+    onOpenAddComment?: (userId?: number) => void
 }
 
-export default function UserList({ users, loading, initialPageSize = 10 }: UserListProps) {
+export default function UserList({ users, loading, initialPageSize = 10, onOpenAddComment }: UserListProps) {
     const { t } = useTranslation()
 
     const paginationLocale: PaginationProps['locale'] = {
@@ -51,12 +52,12 @@ export default function UserList({ users, loading, initialPageSize = 10 }: UserL
                         className={styles?.card || ''}
                         title={<Link to={`/users/${user.id}`}>{user.name}</Link>}
                         extra={
-                        <div>
-                            <Link to={`/users/${user.id}`}>
-                                <Button type="link">{t('details')}</Button>
-                            </Link>
-                            <Button type="link" disabled>{t('add')}</Button>
-                        </div>
+                            <div>
+                                <Link to={`/users/${user.id}`}>
+                                    <Button type="link">{t('details')}</Button>
+                                </Link>
+                                <Button type="link" onClick={() => onOpenAddComment?.(user.id)}>{t('addComment')}</Button>
+                            </div>
                         }>
                         <div className={styles.user_email}>{t('email')}: {user.email}</div>
                         <div className={styles.user_company}>{t('nameCompany')}: {user.company?.name}</div>

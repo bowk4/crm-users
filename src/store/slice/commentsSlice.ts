@@ -10,12 +10,14 @@ export type Comment = {
 
 type CommentsState = {
     list: Comment[]
+    added: Comment[]
     loading: boolean
     error: string | null
 }
 
 const initialState: CommentsState = {
     list: [],
+    added: [],
     loading: false,
     error: null
 }
@@ -41,6 +43,10 @@ const commentsSlice = createSlice({
             state.list = []
             state.error = null
             state.loading = false
+        },
+        addComment(state, action: PayloadAction<Comment>) {
+            state.added = [action.payload, ...state.added]
+            state.list = [action.payload, ...state.list]
         }
     },
     extraReducers: (builder) => {
@@ -51,7 +57,11 @@ const commentsSlice = createSlice({
             })
             .addCase(loadCommentsByUser.fulfilled, (state, action: PayloadAction<Comment[]>) => {
                 state.loading = false
-                state.list = action.payload
+                const fulfilledAction = action as ReturnType<typeof loadCommentsByUser.fulfilled>
+                const userId = fulfilledAction.meta.arg
+
+                const localForUser = state.added.filter((c) => c.postId === userId)
+                state.list = [...localForUser, ...action.payload]
             })
             .addCase(loadCommentsByUser.rejected, (state, action) => {
                 state.loading = false
@@ -60,5 +70,5 @@ const commentsSlice = createSlice({
     }
 })
 
-export const { clearComments } = commentsSlice.actions
+export const { clearComments, addComment } = commentsSlice.actions
 export default commentsSlice.reducer
