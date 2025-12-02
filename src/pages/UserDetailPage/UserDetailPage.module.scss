@@ -20,3 +20,10 @@
     font-weight: 600
   }
 }
+
+.user_detailWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* два рівні стовпчики */
+  gap: 10px 20px; /* вертикальний і горизонтальний відступи */
+  align-items: start;
+}

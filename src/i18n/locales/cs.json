@@ -21,5 +21,9 @@
   "selectUser": "Vyberte uživatele",
   "forUser": "Pro uživatele",
   "authorEmail": "Váš e-mail",
-  "commentBody": "Text komentáře"
+  "commentBody": "Text komentáře",
+
+  "usernameUser": "Uživatelské jméno",
+  "cityUser": "Město",
+  "websiteUser": "Web"
 }
