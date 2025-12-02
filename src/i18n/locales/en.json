@@ -21,5 +21,9 @@
   "selectUser": "Select user",
   "forUser" : "For user",
   "authorEmail": "Your email",
-  "commentBody": "Body comment"
+  "commentBody": "Body comment",
+
+  "usernameUser": "Username",
+  "cityUser": "City",
+  "websiteUser": "Website"
 }

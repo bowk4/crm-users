@@ -69,8 +69,18 @@ export default function UserDetailPage() {
                       <Button onClick={() => setModalOpen(true)}>{t('addComment') }</Button>
                   </div>
               }>
+
             <p><strong>{t('email')}:</strong> {user.email}</p>
             <p><strong>{t('nameCompany')}:</strong> {user.company?.name}</p>
+            <p><strong>{t('cityUser')}:</strong> {user.address?.city ?? '-'}</p>
+            <p><strong>{t('usernameUser')}:</strong> {user.username ?? '-'}</p>
+            <p><strong>{t('websiteUser')}:</strong> {' '}
+                 {user.website ? (
+                    <a href={`https://${user.website}`} target="_blank" rel="noopener noreferrer">
+                        {user.website}
+                    </a>
+                ) : '-'}
+            </p>
 
             <h3 className={styles.title_comments}>{t('comments')}</h3>
 

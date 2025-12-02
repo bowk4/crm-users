@@ -5,6 +5,11 @@ export type User = {
     id: number
     name: string
     email?: string
+    username?: string
+    website?: string
+    address?: {
+        city?: string
+    }
     company?: { name?: string }
 }
 
