@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAppDispatch, useAppSelector } from '../../store/hooks'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { loadUsers } from '../../store/slice/usersSlice'
 import { loadCommentsByUser, clearComments } from '../../store/slice/commentsSlice'
 import { Alert, Button, Card, List, Skeleton } from 'antd'
 import styles from './UserDetailPage.module.scss'
+import AddCommentModal from '../../components/AddCommentModal/AddCommentModal'
 
 export default function UserDetailPage() {
     const { id } = useParams<{ id: string }>()
@@ -38,6 +39,8 @@ export default function UserDetailPage() {
         }
     }, [userId, dispatch])
 
+    const [modalOpen, setModalOpen] = useState(false)
+
     if (usersLoading) return <Skeleton active />
     if (usersError) {
         return (
@@ -61,16 +64,16 @@ export default function UserDetailPage() {
 
     return (
         <Card title={user.name}
-        extra={
-            <div>
-                <Button>{t('addComment') }</Button>
-            </div>
-        }>
+              extra={
+                  <div>
+                      <Button onClick={() => setModalOpen(true)}>{t('addComment') }</Button>
+                  </div>
+              }>
             <p><strong>{t('email')}:</strong> {user.email}</p>
             <p><strong>{t('nameCompany')}:</strong> {user.company?.name}</p>
 
             <h3 className={styles.title_comments}>{t('comments')}</h3>
-            
+
             {commentsLoading ? (
                 <Skeleton active paragraph={{ rows: 2 }} />
             ) : commentsError ? (
@@ -98,6 +101,13 @@ export default function UserDetailPage() {
                     )}
                 />
             )}
+
+            <AddCommentModal
+                open={modalOpen}
+                onClose={() => setModalOpen(false)}
+                initialUserId={user.id}
+                users={users}
+            />
         </Card>
     )
 }
