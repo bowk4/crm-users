@@ -42,6 +42,7 @@ export default function UserList({ users, loading, initialPageSize = 10, onOpenA
 
     return (
         <List
+            className={styles.listWrapper}
             loading={loading}
             grid={{ gutter: 16, column: 1 }}
             dataSource={users}
@@ -49,16 +50,19 @@ export default function UserList({ users, loading, initialPageSize = 10, onOpenA
             renderItem={(user: User) => (
                 <List.Item key={user.id}>
                     <Card
-                        className={styles?.card || ''}
+                        className={styles.card}
                         title={<Link to={`/users/${user.id}`}>{user.name}</Link>}
                         extra={
                             <div>
                                 <Link to={`/users/${user.id}`}>
                                     <Button type="link">{t('details')}</Button>
                                 </Link>
-                                <Button type="link" onClick={() => onOpenAddComment?.(user.id)}>{t('addComment')}</Button>
+                                <Button type="link" onClick={() => onOpenAddComment?.(user.id)}>
+                                    {t('addComment')}
+                                </Button>
                             </div>
-                        }>
+                        }
+                    >
                         <div className={styles.user_email}>{t('email')}: {user.email}</div>
                         <div className={styles.user_company}>{t('nameCompany')}: {user.company?.name}</div>
                     </Card>
