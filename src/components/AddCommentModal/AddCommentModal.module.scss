@@ -1,0 +1,37 @@
+.contentForm label {
+  font-weight: 500;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.formItem {
+  margin: 20px 0 14px;
+}
+
+.input, .select, .textarea {
+  border-radius: 8px;
+}
+
+.forUser {
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #fbfbff;
+  border: 1px dashed #e6e9ff;
+  border-radius: 8px;
+  color: #0f172a;
+}
+
+.btnCancel {
+  background: transparent;
+  border: 1px solid #e6e6e6;
+  color: #444;
+}
+
+.ant-form-item-label > label {
+  color: #344054;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+

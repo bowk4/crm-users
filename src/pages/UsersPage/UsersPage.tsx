@@ -5,7 +5,7 @@ import {Alert, Button, Input} from "antd";
 import {useEffect, useMemo, useState} from "react";
 import {useTranslation} from "react-i18next";
 import AddCommentModal from '../../components/AddCommentModal/AddCommentModal'
-
+import styles from './UsersPage.module.scss'
 
 export default function UsersPage() {
     const { t } = useTranslation()
@@ -14,7 +14,7 @@ export default function UsersPage() {
     const [filter, setFilter] = useState('')
 
     const [modalOpen, setModalOpen] = useState(false)
-    const [modalUserId, setModalUserId] = useState<number | null>(null) // якщо null — у формі потрібно вибрати user
+    const [modalUserId, setModalUserId] = useState<number | null>(null)
 
     useEffect(() => {
         dispatch(loadUsers())
@@ -36,10 +36,18 @@ export default function UsersPage() {
     }
 
     return (
-        <div>
-            <div style={{marginBottom: 12, display: 'flex', gap: 8}}>
-                <Input placeholder={t('filterPlaceholder')} value={filter} onChange={e => setFilter(e.target.value)}/>
-                <Button onClick={() => openAddCommentForUser(null)}>{t('addComment')}</Button>
+        <div className={styles.container}>
+            <div className={styles.controls}>
+                <Input
+                    className={styles.search}
+                    placeholder={t('filterPlaceholder')}
+                    value={filter}
+                    onChange={e => setFilter(e.target.value)}
+                    allowClear
+                />
+                <Button className={styles.addBtn} onClick={() => openAddCommentForUser(null)}>
+                    {t('addComment')}
+                </Button>
             </div>
 
             {error && (
@@ -51,7 +59,9 @@ export default function UsersPage() {
                 />
             )}
 
-            <UserList users={filtered} loading={loading} onOpenAddComment={(userId) => openAddCommentForUser(userId)} />
+            <div className={styles.listWrapper}>
+                <UserList users={filtered} loading={loading} onOpenAddComment={(userId) => openAddCommentForUser(userId)} />
+            </div>
 
             <AddCommentModal
                 open={modalOpen}

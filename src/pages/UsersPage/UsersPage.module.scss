@@ -1,0 +1,28 @@
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.search {
+  flex: 1 1 auto;
+  min-width: 160px;
+}
+
+.listWrapper {
+  width: 100%;
+}
+
+
