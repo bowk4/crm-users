@@ -1,0 +1,32 @@
+.listWrapper {
+  padding: 8px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6 !important;
+  border-radius: 10px !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  padding: 4px;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+.user_email,
+.user_company {
+  font-size: 14px;
+  padding: 4px 0;
+  line-height: 1.4;
+
+  strong {
+    color: #444;
+  }
+}
+
+.user_company {
+  margin-top: 4px;
+}
+

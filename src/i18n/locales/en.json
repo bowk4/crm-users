@@ -1,3 +1,29 @@
 {
-  "title": "Users"
+  "title": "Users",
+  "filterPlaceholder": "Search by name or company name",
+  "addComment": "Add comment",
+  "details": "Detail",
+  "errorLoadingUsers": "Error Loading Users",
+  "totalListUsers": "Total",
+  "perPage": "page",
+  "email": "Email",
+  "nameCompany": "Company",
+  "comments": "Comments",
+  "userNotFound": "User Not Found",
+  "serverError": "Server Error",
+  "noComments": "No comments",
+
+  "commentAdded": "Comment Added",
+  "addCommentModal" : "Modal window for adding a comment",
+  "cancelModal": "Cancel",
+  "addItemsModal": "Add",
+  "userList": "User list",
+  "selectUser": "Select user",
+  "forUser" : "For user",
+  "authorEmail": "Your email",
+  "commentBody": "Body comment",
+
+  "usernameUser": "Username",
+  "cityUser": "City",
+  "websiteUser": "Website"
 }

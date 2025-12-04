@@ -1,3 +1,29 @@
 {
-  "title": "Uživatelé"
+  "title": "Uživatelé",
+  "filterPlaceholder": "Hledat podle jména nebo firmy",
+  "addComment": "Přidat komentář",
+  "details": "Podrobnosti",
+  "errorLoadingUsers": "Chyba při načítání uživatelů",
+  "totalListUsers": "Celkový",
+  "perPage": "stránka",
+  "email": "E-mail",
+  "nameCompany": "Společnost",
+  "comments": "Komentáře",
+  "userNotFound": "Uživatel nenalezen",
+  "serverError": "Chyba serveru",
+  "noComments": "Žádné komentáře",
+
+  "commentAdded": "Komentář byl přidán",
+  "addCommentModal": "Okno pro přidání komentáře",
+  "cancelModal": "Zrušit",
+  "addItemsModal": "Přidat",
+  "userList": "Seznam uživatelů",
+  "selectUser": "Vyberte uživatele",
+  "forUser": "Pro uživatele",
+  "authorEmail": "Váš e-mail",
+  "commentBody": "Text komentáře",
+
+  "usernameUser": "Uživatelské jméno",
+  "cityUser": "Město",
+  "websiteUser": "Web"
 }
